@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Playfair+Display&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin:0;
+    font-family: helvetica ;
+}
+.draggable_list{
+    border:1px solid #e3e5e4;
+    color:#34444f;
+    padding:0;
+    list-style-type: none;
+
+      
+}
+.draggable_list li{
+    background-color: #fff;
+    display: flex;
+    flex:1;
+}
+.draggable_list li:not(:last-of-type){
+    border-bottom: 1px solid #e3e4e5;
+}
+.draggable_list .number{
+    background-color: gray;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:28px;
+    height:60px;
+    width:60px;
+}
+.draggable_list .person-name{
+    margin: 0 20px 0 0;
+}
+/*js dynamci class*/
+.draggable_list li.over .draggable{
+    background-color:#eaeaea; 
+}
+/* js dynamic classes*/
+.draggable_list li.right .person-name{
+    color:#3ae374; 
+}
+/*js synamic class*/
+.draggable_list li.wrong .person-name{
+    color:red;
+}
+
+.draggable{
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px;
+    flex:1;
+}
+/** buttotn styles*/
+.check-button{
+    background-color: #eaeaea;
+    border:none;
+    color:black;
+    font-size: 16px;
+    padding:10px 20px;
+    cursor: pointer;
+}
+.check-button:active{
+    transform: scale(0.99);
+}
+.check-button:focus{
+    outline: none;
+}
